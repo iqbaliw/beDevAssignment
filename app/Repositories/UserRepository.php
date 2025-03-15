@@ -20,12 +20,14 @@ class UserRepository
 
     public static function createUser($data)
     {
-        return DB::table('users')->insert([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-            'role' => $data['role'],
-            'created_at' => now()
+        $hashedPassword = Hash::make($data['password']);
+            
+        return DB::statement("CALL SP_UpSertUser(?, ?, ?, ?, ?)", [
+            null,
+            $data['name'],
+            $data['email'],
+            $data['role'],
+            $hashedPassword
         ]);
     }
 

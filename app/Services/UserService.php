@@ -54,7 +54,7 @@ class UserService
             return ApiResponse::success($this->mainLabel." berhasil dibuat.");
         } catch (\Exception $e) {
             DB::rollBack();
-            return ApiResponse::internalError($this->messageInternalError);
+            return ApiResponse::internalError($e->getMessage());
         }
     }
 

@@ -24,21 +24,21 @@ class ClientApiRepository
         $clientId = Str::uuid();
         $clientSecret = Hash::make($clientId);
         
-        return DB::table('client_apis')->insert([
-            'app_name' => $data['app_name'],
-            'client_id' => $clientId,
-            'client_secret' => $clientSecret,
-            'created_at' => now()
+        return DB::statement("CALL SP_UpSertClientApi(?, ?, ?, ?)", [
+            null,
+            $data['app_name'],
+            $clientId,
+            $clientSecret
         ]);
     }
     
     public static function updateClientApi($id, $data)
     {
-        return DB::table('client_apis')->where('id', $id)->update([
-            'app_name' => $data['app_name'],
-            'client_id' => $data['client_id'],
-            'client_secret' => $data['client_secret'],
-            'updated_at' => now()
+        return DB::statement("CALL SP_UpSertClientApi(?, ?, ?, ?)", [
+            $id,
+            $data['app_name'],
+            $data['client_id'],
+            $data['client_secret']
         ]);
     }
 

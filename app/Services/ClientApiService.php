@@ -78,7 +78,7 @@ class ClientApiService
             return ApiResponse::success($this->mainLabel." berhasil diperbarui.");
         } catch (\Exception $e) {
             DB::rollBack();
-            return ApiResponse::internalError($this->messageInternalError);
+            return ApiResponse::internalError($e->getMessage());
         }
     }
 
