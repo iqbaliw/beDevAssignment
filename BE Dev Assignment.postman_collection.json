@@ -1,0 +1,308 @@
+{
+	"info": {
+		"_postman_id": "7ab07671-b88e-497d-9041-7fe7d53b5689",
+		"name": "BE Dev Assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "3407056"
+	},
+	"item": [
+		{
+			"name": "Get User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjEyMzQvYXBpL2xvZ2luIiwiaWF0IjoxNzQxOTExNjkzLCJleHAiOjE3NDE5MTUyOTMsIm5iZiI6MTc0MTkxMTY5MywianRpIjoiQjRlQTZiNWg5cmFVMm1vMiIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.leewNby_EFnHErlEUAsiDJJHUGakhyZQM_5M-96txvg"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "{{url_docker_dev}}/api/users"
+			},
+			"response": []
+		},
+		{
+			"name": "Add User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYmVkZXZhc3NpZ25tZW50LnRlc3QvYXBpL2xvZ2luIiwiaWF0IjoxNzQyMDIwODEwLCJleHAiOjE3NDIwMjQ0MTAsIm5iZiI6MTc0MjAyMDgxMCwianRpIjoiWU1tTkJpTUZxRWxqbGVlaCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.DK0CfJV_b24V5CPHRpg9th5y8pCSB1yIi8mlaPo7lWQ"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"tess\",\n    \"email\": \"iqbalwahyuuuuuu@gmail.com\",\n    \"password\": \"rahasia2025\",\n    \"role\": \"user\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url_docker_dev}}/api/users"
+			},
+			"response": []
+		},
+		{
+			"name": "Get User By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{url_docker_dev}}/api/users/8"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "{{url_docker_dev}}/api/users/7"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Client API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{url_docker_dev}}/api/client_api"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Client API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYmVkZXZhc3NpZ25tZW50LnRlc3QvYXBpL2NsaWVudC9sb2dpbiIsImlhdCI6MTc0MjAyMjYxNiwiZXhwIjoxNzQyMDI2MjE2LCJuYmYiOjE3NDIwMjI2MTYsImp0aSI6ImZ0blpKT1hCbEZvc3E5TmsiLCJzdWIiOiIyIiwicHJ2IjoiYjYzNTA1MjYxN2QxNjMzYmViOWE0ZTllNjAyMzc1OWRjZDIzN2Y1OSJ9.QdNDbejsFpbWtTAl_FsUx2Vt9reF8a-1386cVwvYK0I"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"app_name\": \"AVO 2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url_docker_dev}}/api/client_api"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Client API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYmVkZXZhc3NpZ25tZW50LnRlc3QvYXBpL2NsaWVudC9sb2dpbiIsImlhdCI6MTc0MjAyMjYxNiwiZXhwIjoxNzQyMDI2MjE2LCJuYmYiOjE3NDIwMjI2MTYsImp0aSI6ImZ0blpKT1hCbEZvc3E5TmsiLCJzdWIiOiIyIiwicHJ2IjoiYjYzNTA1MjYxN2QxNjMzYmViOWE0ZTllNjAyMzc1OWRjZDIzN2Y1OSJ9.QdNDbejsFpbWtTAl_FsUx2Vt9reF8a-1386cVwvYK0I"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"app_name\": \"AVO xx\",\n    \"client_id\": \"203fa87e-755e-40e4-b09f-269c234d7769\",\n    \"client_secret\": \"$2y$12$5MKNeWNuS2d1gxy1Dca0su2UmlccTkgfB349nCD02/x2nKGa3E2bO\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url_docker_dev}}/api/client_api/3"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Client API By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{url_docker_dev}}/api/client_api/2"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User Copy",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "{{url_docker_dev}}/api/client_api/6"
+			},
+			"response": []
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"iqbalwahyudi20@gmail.com\",\n    \"password\": \"rahasia2025\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url_docker_dev}}/api/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Logout User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": ""
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"iqbalwahyudi20@gmail.com\",\n    \"password\": \"rahasia2025\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url_docker_dev}}/api/logout"
+			},
+			"response": []
+		},
+		{
+			"name": "Refresh Token User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYmVkZXZhc3NpZ25tZW50LnRlc3QvYXBpL2xvZ2luIiwiaWF0IjoxNzQxNzM2MTk0LCJleHAiOjE3NDE3Mzk3OTQsIm5iZiI6MTc0MTczNjE5NCwianRpIjoiNXNiSmZvaUlqU0JuMUhSRSIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Bsa61byUX7bdJ4o_bV55Lzu3B0svyRS0wViiktzprG0"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"iqbalwahyudi20@gmail.com\",\n    \"password\": \"rahasia2025\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url_docker_dev}}/api/refresh"
+			},
+			"response": []
+		},
+		{
+			"name": "Login Client API",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"client_id\": \"472ea056-8360-4d79-9801-422beb765d92\",\n    \"client_secret\": \"$2y$12$149tTP8YdqsK2ezFRUXt4.Tvh8uPhTmD0jJiMUyu2rygOvsiOGaG6\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url_docker_dev}}/api/client/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Logout Client API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYmVkZXZhc3NpZ25tZW50LnRlc3QvYXBpL2NsaWVudC9sb2dpbiIsImlhdCI6MTc0MTgxMzIzNiwiZXhwIjoxNzQxODE2ODM2LCJuYmYiOjE3NDE4MTMyMzYsImp0aSI6IlFpUUZRVTZTd0JWR3JyQ1giLCJzdWIiOiIyIiwicHJ2IjoiYjYzNTA1MjYxN2QxNjMzYmViOWE0ZTllNjAyMzc1OWRjZDIzN2Y1OSJ9.6q9G6uCTL9mN7sAlM8Mg-a2iXC-ihWXgdvx_Dvxne5k"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"client_id\": \"472ea056-8360-4d79-9801-422beb765d92\",\n    \"client_secret\": \"$2y$12$149tTP8YdqsK2ezFRUXt4.Tvh8uPhTmD0jJiMUyu2rygOvsiOGaG6\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url_docker_dev}}/api/client/logout"
+			},
+			"response": []
+		},
+		{
+			"name": "Refresh Token Client API",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYmVkZXZhc3NpZ25tZW50LnRlc3QvYXBpL2NsaWVudC9sb2dpbiIsImlhdCI6MTc0MTc4NDU1MiwiZXhwIjoxNzQxNzg4MTUyLCJuYmYiOjE3NDE3ODQ1NTIsImp0aSI6Ilc3c1hNMklCU1ptbmRUVEwiLCJzdWIiOiIyIiwicHJ2IjoiYjYzNTA1MjYxN2QxNjMzYmViOWE0ZTllNjAyMzc1OWRjZDIzN2Y1OSJ9.oKfRc-9eBt4xZyUkWoIK1wTU3hJwrTO95O6gjxvMoj4"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"client_id\": \"472ea056-8360-4d79-9801-422beb765d92\",\n    \"client_secret\": \"$2y$12$149tTP8YdqsK2ezFRUXt4.Tvh8uPhTmD0jJiMUyu2rygOvsiOGaG6\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url_docker_dev}}/api/client/refresh"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url_docker_dev",
+			"value": "http://localhost:1234",
+			"type": "string"
+		},
+		{
+			"key": "url_dev",
+			"value": "http://bedevassignment.test",
+			"type": "string"
+		}
+	]
+}
