@@ -1,67 +1,75 @@
 ## API Users & Clients
 
-This API have some functionality to manage users and client APIs with MySQL database, such as:
+This API provides functionality to manage users and client APIs using a MySQL database. Features include:
 
 ### Users
-- Get all users.
-- Create new user.
-- Delete a user.
-- Login user with JWT authentication.
-- Logout user.
-- Refresh JWT token.
+- Retrieve all users.  
+- Create a new user.  
+- Delete a user.  
+- Authenticate users with JWT.  
+- Logout a user.  
+- Refresh a JWT token.
 
 ### Client APIs
-
-- Get all client APIs.
-- Create new client API.
-- Delete a client API.
-- Login client API with JWT authentication.
-- Logout client API.
-- Refresh JWT token.
+- Retrieve all client APIs.  
+- Create a new client API.  
+- Delete a client API.  
+- Authenticate client APIs with JWT.  
+- Logout a client API.  
+- Refresh a JWT token.
 
 ## Dockerization
 
-This API supports dockerization and comes with two dockerfile:
-- <b>Dockerfile.base</b>, which consist of operating system, webserver, PHP, nginx, and other relative software and extension. This will make a docker image base for OS layer.
-- <b>Dockerfile</b>, which consist of extension and laravel installation.
+This API supports Dockerization and includes two Dockerfiles:  
+- **Dockerfile.base**: Contains the operating system, web server, PHP, Nginx, and other required software and extensions. This serves as the base image for the OS layer.  
+- **Dockerfile**: Contains additional extensions and Laravel installation.
 
 How to run:
-- Build Dockerfile first with commands:
+- Build the Docker image:
     <br/><code>docker build . -t be-app</code>
-- Run, Forrest, Run!
+- Run the container:
     <br/><code>docker run -p 1234:80 --name=be -d -t be-app</code>
 
 
 ## Unit Test
 
-Yes, this API can doing unit test too which supported by <b>php artisan test</b>. There are four unit tests with several scenarios, such as:
+Yes, this API supports unit testing using php artisan test. It includes four test classes covering multiple scenarios:
 
 ### AuthTest
 Commands: <code>php artisan test --filter AuthTest</code>
-- User can login and get JWT token.
-- User can logout.
-- User can refresh token.
+- A user can log in and receive a JWT token.
+- A user can log out.
+- A user can refresh their JWT token.
 
 ### AuthClientTest
 Commands: <code>php artisan test --filter AuthClientTest</code>
-- Client API can login and get JWT token.
-- Client API can logout.
-- Client API refresh token.
+- A client API can log in and receive a JWT token.
+- A client API can log out.
+- A client API can refresh its JWT token.
 
 ### UserTest
 Commands: <code>php artisan test --filter UserTest</code>
-- User can add user.
-- User can get all users.
-- User can get user by id.
-- User can delete user.
+- A user can create a new user.
+- A user can retrieve all users.
+- A user can retrieve a user by ID.
+- A user can delete a user.
 
 ### ClientApiTest
 Commands: <code>php artisan test --filter ClientApiTest</code>
-- Client API can add user.
-- Client API can get all client apis.
-- Client API can get client api by id.
-- Client API can update client api.
-- Client API can delete client api.
+- A client API can create a user.
+- A client API can retrieve all client APIs.
+- A client API can retrieve a client API by ID.
+- A client API can update a client API.
+- A client API can delete a client API.
 
 ## Postman Collection
-If you need Postman Collection, please, don't hesitate to contact me.
+If you need the Postman collection, feel free to contact me.
+
+## Spesification
+This API is built with the following tech stack:
+- Laravel 12, following a layered architecture:
+    1. Controller - Handles requests and validation.
+    2. Service - Implements business logic.
+    3. Repository - Manages data persistence.
+- PHP 8.4
+- MySQL 8
