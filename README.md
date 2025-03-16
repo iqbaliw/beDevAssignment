@@ -63,7 +63,7 @@ Commands: <code>php artisan test --filter ClientApiTest</code>
 - A client API can delete a client API.
 
 ## Postman Collection
-If you need the Postman collection, feel free to contact me.
+It also comes with a Postman collection.
 
 ## Spesification
 This API is built with the following tech stack:
@@ -73,3 +73,20 @@ This API is built with the following tech stack:
     3. Repository - Manages data persistence.
 - PHP 8.4
 - MySQL 8
+
+## Standardization of API Response
+This API follows a standardized response format to ensure consistency. The response includes the following fields:
+- <code>status</code>
+- <code>code</code>
+- <code>message</code>
+- <code>timestamp</code>
+- <code>data</code>
+
+Beside that, it also came with standar of HTTP code, with the following:
+- <code>200</code> - Success
+- <code>201</code> - Successfully created
+- <code>404</code> - Not found
+- <code>400</code> - Bad request (failure)
+- <code>401</code> - Unauthorized
+- <code>403</code> - Forbidden access
+- <code>500</code> - Internal server error
